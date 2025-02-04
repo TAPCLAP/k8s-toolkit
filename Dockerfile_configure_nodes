@@ -1,0 +1,9 @@
+FROM docker.io/alpine:3.21.2
+
+RUN apk add --no-cache \
+     procps \
+     curl \
+     jq \
+     yq \
+     && curl -L "https://dl.k8s.io/release/v1.28.15/bin/linux/amd64/kubectl" -o /usr/local/bin/kubectl \
+     && chmod +x /usr/local/bin/kubectl
