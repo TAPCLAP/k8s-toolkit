@@ -4,6 +4,7 @@ RUN apk add --no-cache \
      procps \
      curl \
      jq \
-     yq \
+     && curl -o /usr/local/bin/yq -L 'https://github.com/mikefarah/yq/releases/download/v4.45.1/yq_linux_amd64' \
+     && chmod +x /usr/local/bin/yq \
      && curl -L "https://dl.k8s.io/release/v1.28.15/bin/linux/amd64/kubectl" -o /usr/local/bin/kubectl \
      && chmod +x /usr/local/bin/kubectl
