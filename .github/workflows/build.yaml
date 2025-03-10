@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@main
       # nosemgrep
-      - uses: orangeappsru/build-images-action@main
+      - uses: tapclap/build-images-action@main
         id: build-images
         with:
           registry: ghcr.io
