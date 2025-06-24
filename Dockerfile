@@ -1,4 +1,4 @@
-FROM docker.io/alpine:3.21.2
+FROM docker.io/alpine:3.22.0
 
 RUN apk add --no-cache \
      procps \
@@ -15,4 +15,6 @@ RUN apk add --no-cache \
      strace \
      iperf \
      jq \
-     yq
+     yq \
+     wireguard-tools
+
